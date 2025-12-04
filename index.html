@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨赫 - 量化研究个人展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        dark: '#1D2939',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light font-sans text-dark">
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-primary font-bold text-xl flex items-center gap-2">
+                <i class="fa fa-line-chart"></i>
+                <span>量化研究Portfolio</span>
+            </a>
+            <div class="hidden md:flex gap-6">
+                <a href="#about" class="hover:text-primary transition-colors">个人简介</a>
+                <a href="#education" class="hover:text-primary transition-colors">教育背景</a>
+                <a href="#internship" class="hover:text-primary transition-colors">实习经历</a>
+                <a href="#skills" class="hover:text-primary transition-colors">技术技能</a>
+                <a href="#works" class="hover:text-primary transition-colors">成果展示</a>
+            </div>
+            <button class="md:hidden text-dark">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow mb-4">
+                    杨赫 <span class="text-primary">量化研究</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-6">
+                    南开大学应用经济学硕士在读，专注多资产量化策略研发，覆盖A股/期货/Crypto/衍生品领域，具备实盘策略落地与回测框架优化能力
+                </p>
+                <div class="flex gap-4">
+                    <a href="#works" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+                        <i class="fa fa-folder-open"></i>
+                        查看成果
+                    </a>
+                    <a href="https://github.com/HyDouble" target="_blank" class="border border-primary text-primary px-6 py-2 rounded-lg hover:bg-primary/5 transition-colors flex items-center gap-2">
+                        <i class="fa fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 rounded-full border-4 border-primary/20 overflow-hidden shadow-lg">
+                    <img src="https://via.placeholder.com/400" alt="个人头像" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 个人简介 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center">个人简介</h2>
+            <div class="max-w-3xl mx-auto bg-light rounded-xl p-6 shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fa fa-user-circle text-primary text-xl w-6 text-center"></i>
+                        <span><b>姓名：</b>杨赫</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa fa-calendar text-primary text-xl w-6 text-center"></i>
+                        <span><b>年龄：</b>22岁</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa fa-id-card text-primary text-xl w-6 text-center"></i>
+                        <span><b>政治身份：</b>共青团员</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa fa-phone text-primary text-xl w-6 text-center"></i>
+                        <span><b>电话：</b>17749980969（微信同号）</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa fa-envelope text-primary text-xl w-6 text-center"></i>
+                        <span><b>邮箱：</b>17749980969@163.com</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa fa-qq text-primary text-xl w-6 text-center"></i>
+                        <span><b>QQ：</b>2565765189</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center">教育背景</h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- 硕士 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-primary">
+                    <div class="flex flex-col md:flex-row justify-between mb-3">
+                        <h3 class="text-xl font-bold">南开大学</h3>
+                        <span class="text-gray-500">2025.09 - 2028.06</span>
+                    </div>
+                    <p class="text-lg mb-2">应用经济学 硕士</p>
+                    <p class="text-gray-600">全国首批“985工程”重点学科单位，核心课程：中级计量</p>
+                </div>
+                <!-- 本科 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-secondary">
+                    <div class="flex flex-col md:flex-row justify-between mb-3">
+                        <h3 class="text-xl font-bold">四川农业大学</h3>
+                        <span class="text-gray-500">2021.09 - 2025.06</span>
+                    </div>
+                    <p class="text-lg mb-2">应用经济学 本科</p>
+                    <ul class="text-gray-600 space-y-1">
+                        <li><i class="fa fa-trophy text-yellow-500 mr-2"></i>校级优秀学生奖学金，四川省优秀毕业生，四川省综A证书</li>
+                        <li><i class="fa fa-ranking-star text-yellow-500 mr-2"></i>必修加权年级排名前2%（94.4/100）</li>
+                        <li><i class="fa fa-book text-primary mr-2"></i>核心课程：计量经济学、统计学、博弈论、Python</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实习经历 -->
+    <section id="internship" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center">实习经历</h2>
+            <div class="max-w-4xl mx-auto bg-light rounded-xl p-8 shadow-sm">
+                <div class="mb-6">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <h3 class="text-xl font-bold text-primary">BigQuant 宽邦科技算法组 - QR实习生</h3>
+                        <span class="text-gray-500">2025.03 - 2025.09</span>
+                    </div>
+                    <div class="space-y-4 text-gray-700">
+                        <div>
+                            <h4 class="font-semibold mb-2">1. 多资产量化策略研发与实盘适配</h4>
+                            <ul class="list-disc list-inside space-y-1 ml-2">
+                                <li>Crypto期权套利：基于Deribit API开发日内横盘做空套利策略，设计心跳检测与资金预校验机制，回测夏普2.32，最大回撤＜10%</li>
+                                <li>期货高频策略：搭建期货高频tick策略全流程，优化before_trade_start函数，提升高频信号时效性</li>
+                                <li>因子挖掘：搭建批量因子框架，筛选IC均值0.08、IC_IR＞0.5的Alpha组合，复现国泰191/WorldQuant101因子库</li>
+                                <li>A股实盘策略：构建中长期调仓选股择时策略，实盘5个月年化16%，最大回撤9%，夏普＞1</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">2. 高频数据工程与回测框架优化</h4>
+                            <ul class="list-disc list-inside space-y-1 ml-2">
+                                <li>数据Bug修复：解决排序不确定性问题，实现策略复现一致性100%，形成标准化Bug排查方案</li>
+                                <li>性能加速：C++重写滚动窗口算子，结合Numpy向量化，因子计算效率提升120%，回测耗时从2h缩至50min</li>
+                                <li>指数复现：实现币安BTCDOM价格指数，偏差控制在1%以内</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">3. 跨领域技术研究与风险优化</h4>
+                            <ul class="list-disc list-inside space-y-1 ml-2">
+                                <li>AI专利识别：搭建文本处理与特征识别完整技术链路</li>
+                                <li>尾部风险建模：应用DRO与Risk Parity模型，极端行情下最大回撤较基准降低10%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">竞赛经历</h4>
+                    <ul class="list-disc list-inside space-y-1 ml-2 text-gray-700">
+                        <li>2023/2024年全国大学生数学建模竞赛 一等奖（团队负责人）</li>
+                        <li>2024年美国大学生数学建模竞赛 H奖（团队负责人）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术技能 -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center">技术技能</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 编程工具 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-code"></i></div>
+                    <h3 class="text-xl font-bold mb-3">编程与开发工具</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>Python（Pandas/Numpy）数据清洗分析</li>
+                        <li>C++基础语法与内存管理，计算加速</li>
+                        <li>Java基础，理解回测框架底层逻辑</li>
+                        <li>Linux基础命令，大语言模型辅助编程</li>
+                    </ul>
+                </div>
+                <!-- 量化工具 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-calculator"></i></div>
+                    <h3 class="text-xl font-bold mb-3">量化研究工具</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>多品类策略开发（A股/期货/Crypto/期权）</li>
+                        <li>单因子分析与向量化回测框架搭建</li>
+                        <li>贝叶斯优化/网格搜索参数迭代</li>
+                        <li>实盘策略适配与风控机制设计</li>
+                    </ul>
+                </div>
+                <!-- 数据处理 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <div class="text-primary text-3xl mb-4"><i class="fa fa-database"></i></div>
+                    <h3 class="text-xl font-bold mb-3">数据处理能力</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>处理日频/分钟/tick级多源数据</li>
+                        <li>解决数据缺失与格式兼容问题</li>
+                        <li>数据本地化存储与增量更新</li>
+                        <li>FAI集群与C++大规模因子加工</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成果展示 -->
+    <section id="works" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-10 text-center">量化成果展示</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- DRO组合优化 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="p-1 bg-gradient-to-r from-primary to-secondary"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">DRO组合优化-大类ETF配置</h3>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">回测周期</span>
+                                <span class="font-medium">近10年</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">回测夏普</span>
+                                <span class="font-medium">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">回测年化</span>
+                                <span class="font-medium">10%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">实盘模拟夏普</span>
+                                <span class="font-medium text-primary">3.2</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">实盘模拟年化</span>
+                                <span class="font-medium text-primary">38%</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-sm text-gray-600">
+                            <p>近6个月实盘模拟区间收益+6.36%，区间最大回撤仅0.84%，交易胜率100%，夏普比率5.90，展现优异的风险收益特性</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 自开发小市值策略 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="p-1 bg-gradient-to-r from-secondary to-primary"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">自开发小市值策略</h3>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">回测周期</span>
+                                <span class="font-medium">近10年</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">回测夏普</span>
+                                <span class="font-medium">1.51</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">回测年化</span>
+                                <span class="font-medium">55%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">实盘模拟夏普</span>
+                                <span class="font-medium text-primary">2.69</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">实盘模拟年化</span>
+                                <span class="font-medium text-primary">97%</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-sm text-gray-600">
+                            <p>实盘模拟累计收益76.92%，夏普比率3.7，最大回撤6.64%，在小市值标的中实现高收益与可控风险的平衡</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 期权日内套利 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="p-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">期权日内套利tick策略</h3>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">策略夏普</span>
+                                <span class="font-medium">1.9</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">交易胜率</span>
+                                <span class="font-medium">88%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">盈亏比</span>
+                                <span class="font-medium">2.2</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">累计收益率</span>
+                                <span class="font-medium text-primary">50.17%</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-sm text-gray-600">
+                            <p>基于tick级数据构建日内套利逻辑，信息比率0.25，年化收益率28.51%，在期权衍生品领域实现稳定日内收益</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BTCUSDTDOM指数 -->
+                <div class="bg-light rounded-xl overflow-hidden shadow-sm card-hover">
+                    <div class="p-1 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">BTCUSDTDOM价格指数</h3>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">数据周期</span>
+                                <span class="font-medium">2021-2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">指数偏差</span>
+                                <span class="font-medium">＜1%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">核心算法</span>
+                                <span class="font-medium">Divisor Adjustment</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">数据粒度</span>
+                                <span class="font-medium">多周期（1分-1月）</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-sm text-gray-600">
+                            <p>主导币安平台指数工程复现，解决成分币拆分/合并/退市导致的指数跳变问题，支持多周期行情分析与因子研究</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <a href="https://github.com/HyDouble" target="_blank" class="inline-flex items-center gap-2 text-primary hover:underline">
+                    <i class="fa fa-github"></i>
+                    更多成果请查看GitHub仓库
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="py-8 bg-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center gap-6 mb-4 text-xl">
+                <a href="https://github.com/HyDouble" target="_blank" class="hover:text-primary transition-colors"><i class="fa fa-github"></i></a>
+                <a href="mailto:17749980969@163.com" class="hover:text-primary transition-colors"><i class="fa fa-envelope"></i></a>
+                <a href="tel:17749980969" class="hover:text-primary transition-colors"><i class="fa fa-phone"></i></a>
+            </div>
+            <p class="text-gray-400">© 2025 杨赫 量化研究个人展示 | 仅作个人能力展示，不构成投资建议</p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
