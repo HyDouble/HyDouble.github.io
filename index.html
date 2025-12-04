@@ -38,6 +38,13 @@
                 transform: translateY(-5px);
                 box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
             }
+            /* 新增格言专属样式 */
+            .motto {
+                border-left: 4px solid #165DFF;
+                padding: 1rem 1.5rem;
+                background-color: rgba(22, 93, 255, 0.05);
+                font-style: italic;
+            }
         }
     </style>
 </head>
@@ -69,6 +76,12 @@
                 <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow mb-4">
                     杨赫 <span class="text-primary">量化研究</span>
                 </h1>
+                
+                <!-- 新增：个人格言（核心修改） -->
+                <div class="motto text-lg text-dark mb-6">
+                    善用 AI 破题，以体系化研究立基，以工程落地践实，在实干中迭代精进
+                </div>
+
                 <p class="text-lg text-gray-600 mb-6">
                     南开大学应用经济学硕士在读，专注多资产量化策略研发，覆盖A股/期货/Crypto/衍生品领域，具备实盘策略落地与回测框架优化能力
                 </p>
@@ -410,5 +423,4 @@
         });
     </script>
 </body>
-
 </html>
